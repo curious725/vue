@@ -10,10 +10,10 @@
     <div id="app">
         <header>
             <nav>
-                <a href="#">Квадрат</a>
-                <a href="#">Треугольник</a>
-                <a href="#">Круг</a>
-                <a href="#">Яйцо</a>
+                <a href="#" @click="switchView('square')">Квадрат</a>
+                <a href="#" @click="switchView('triangle')">Треугольник</a>
+                <a href="#" @click="switchView('circle')">Круг</a>
+                <a href="#" @click="switchView('egg')">Яйцо</a>
             </nav>
         </header>
         <component :is="currentView"></component>

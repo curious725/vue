@@ -16,5 +16,10 @@ new Vue({
       egg: {
         template: '#egg-template'
       }
+    },
+    methods: {
+      switchView: function(view) {
+        this.currentView = view;
+      }
     }
 })
