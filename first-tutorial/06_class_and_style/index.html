@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue</title>
+</head>
+<body>
+  <div id="switch-class"
+    v-bind:class="{ 'active': isActive, 'text-danger': hasError }">
+    <p>switch class name</p>
+  </div> 
+
+  <div id="computed-class" v-bind:class="classObject">
+    <p>Computed Class</p>
+  </div>
+
+  <div id="sample-style" v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }">
+    <p>sample text</p>
+  </div>
+
+  <div id="sample-style-better" v-bind:style="styleObject">
+    <p>other sample text</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

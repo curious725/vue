@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue</title>
+</head>
+<body>
+  <div id="example">
+    <p>Original message: "{{ message }}"</p>
+    <p>Computed reversed message (cashed): "{{ reversedMessage }}"</p>
+    <p>method reversed message (not cashed): "{{ reversedMessageMethod() }}"</p>
+  </div>
+
+  <div id="name">
+    <p>Full Name: {{ fullName }}</p>
+    <p>First Name: {{ firstName }}</p>
+    <p>Last Name: {{ lastName }}</p>
+    <input v-model='firstName'>
+    <input v-model='lastName'>
+    <input v-model='fullName'>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

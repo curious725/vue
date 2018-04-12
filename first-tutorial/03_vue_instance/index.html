@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue</title>
+</head>
+<body>
+
+  <div id="app-1">
+    {{ message }}
+    {{ message.a }}
+  </div>
+
+  <div id="app-2">
+    <p>{{ obj.foo }}</p>
+
+    <button v-on:click="obj.foo = 'baz'">Change it</button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

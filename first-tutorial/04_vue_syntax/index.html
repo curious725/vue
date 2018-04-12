@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue</title>
+</head>
+<body>
+  <span id="app1" v-once>
+   Never change: {{ freezed_message }} 
+  </span>
+
+  <p>
+    <span id="app2" v-html="rawHTML">
+      This will be substituted by content of rawHTML. 
+    </span>
+  </p>
+
+  <span id="app3" v-bind:id="dynamicid">
+    <p>Dynamic ID</p>
+  </span>
+
+  <button id="app4" v-bind:disabled="isButtonDisabled">
+    On/Off Button {{ 1 + 1 }}
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

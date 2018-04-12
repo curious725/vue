@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue</title>
+</head>
+<body>
+
+  <div id="app">
+    <p>{{ foo }}</p>
+    <!-- мы теперь не можем обновить `foo`! -->
+    <button v-on:click="foo = 'baz'">Изменить</button>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
