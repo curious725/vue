@@ -16,7 +16,7 @@
                 <a href="#" @click="switchView('egg')">Яйцо</a>
             </nav>
         </header>
-        <component :is="currentView"></component>
+        <component :is="currentView" transition="switch"></component>
 
     </div>
 

@@ -88,3 +88,12 @@ nav a:hover {
 .switch-leave {
     left: -100%;
 }
+.switch-transition {
+    transition: all .5s ease-in-out;
+}
+.switch-enter {
+    left: 100%;
+}
+.switch-leave {
+    left: -100%;
+}
