@@ -38,6 +38,11 @@ $(document).ready(function(){
     $el.closest('li').toggleClass('removed');
   }
 
+  function onChangeTitle() {
+    $('h2').text($('.js-change-title').val())
+  }
+
   $('.js-add').click(onAdd);
   $('.js-item').click(toggleRemoved);
+  $('.js-change-title').keyup(onChangeTitle);
 });
