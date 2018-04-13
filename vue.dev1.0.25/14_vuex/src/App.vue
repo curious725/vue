@@ -1,6 +1,9 @@
 <template>
   <div id="app">
     <header>
+      <div class="logo">
+        <img src="./assets/logo.png" alt="">
+      </div>
       <search></search>
     </header>
     <main>
@@ -19,3 +22,4 @@ export default {
 }
 </script>
 
+<style src="./assets/style.css"></style>
