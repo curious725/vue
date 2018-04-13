@@ -22,7 +22,7 @@
         v-bind:class="{ 'removed': item.checked }">
         <div class="checkbox">
           <label>
-            <input type="checkbox"> {{ item.text }}
+            <input type="checkbox" v-model="item.checked"> {{ item.text }}
           </label>   
         </div>
       </li>
@@ -33,7 +33,7 @@
       <input v-model="title">
     </div>
   </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
 <script src="main.js"></script>
 </body>
 </html>
