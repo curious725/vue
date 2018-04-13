@@ -12,7 +12,7 @@
   }
 </script>
 
-<style>
+<style lang="sass">
   h1 {
     color: green;
   }
