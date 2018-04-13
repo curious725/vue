@@ -7,11 +7,23 @@ Vue.component('message',{
   },
   methods: {
     saveMessage: function() {
-      console.log(this.message)
+      this.$emit('message-saved', this.message)
+
+      this.message = ''
     }
   }
 })
 
-new Vue({
+app = new Vue({
   el: 'body',
+  data: {
+    messages: []
+  },
+  methods: {
+    handleMessage: function(message){
+      console.log(message)
+      this.messages.push(message)
+
+    }
+  }
 })

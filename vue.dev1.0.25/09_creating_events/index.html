@@ -7,7 +7,11 @@
 </head>
 <body>
    
-    <message></message> 
+    <message @message-saved="handleMessage"></message> 
+
+    <ul>
+        <li v-for="message in messages">{{ message }}</li>
+    </ul>
 
 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.js"></script>
