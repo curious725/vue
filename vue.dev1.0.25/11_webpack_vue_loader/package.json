@@ -24,5 +24,9 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "g": "^2.0.1",
+    "vue-cli": "^2.9.3"
+  }
 }
