@@ -1,4 +1,4 @@
-<template>
+<template lang="jade">
   <h1>{{ greeting }}</h1>
 </template>
 
