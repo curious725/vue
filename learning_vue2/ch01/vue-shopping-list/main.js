@@ -1,5 +1,8 @@
 var data = {
-  items: ['Bananas', 'Apples'],
+  items: [
+    { text: 'Bananas', checked: true },
+    { text: 'Apples', checked: false }
+  ],
   title: 'My Shopping List'
 };
 
