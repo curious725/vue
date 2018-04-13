@@ -1,0 +1,23 @@
+{
+  "name": "10_vueify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify -t vueify -e main.js -o build.js",
+    "watch": "watchify -t vueify -e main.js -o build.js"
+  },
+  "devDependencies": {
+    "browserify": "*",
+    "vue": "^1.0.24",
+    "vueify": "^8.4.1",
+    "watchify": "^3.11.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "npm": "^5.8.0"
+  }
+}
