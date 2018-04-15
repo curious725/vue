@@ -26,8 +26,7 @@ var ChangeTitleComponent = Vue.extend({
   data: function() {
     return data;
   },
-  template: '      <em>Change  the title of  your  shopping  list  here</em>' +
-            '      <input v-model="title">'
+  template: '<input v-model="title">'
 });
 var AddItemComponent = Vue.extend({
   data: function() {
@@ -44,8 +43,16 @@ var AddItemComponent = Vue.extend({
           checked: false
         });
         this.newItem = '';    
-    },
-  }
+      }
+    }
+  },
+  template:
+  '<div class="input-group">'                                                                                                                     +
+    '<input v-model="newItem" @keyup.enter="addItem" placeholder="add shopping list item" type="text" class="form-control">'  +
+    '<span class="input-group-btn">'                                                                                          +
+    '  <button @click="addItem" class="btn btn-default" type="button">Add!</button>'                                          +
+    '</span>'                                                                                                                 +
+  '</div>'
 });
 
 // Registering components
