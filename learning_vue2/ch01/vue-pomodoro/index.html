@@ -18,6 +18,9 @@
     <button :disabled="state==='started'"  @click="start()">
         <i  class="glyphicon  glyphicon-play"></i>  
     </button>
+    <button :disabled="state!=='started'" @click="pause()">
+        <i class="glyphicon glyphicon-pause"></i> 
+    </button>
     <h2>
       <h3>{{ title }}</h3>
       <div class="well">
