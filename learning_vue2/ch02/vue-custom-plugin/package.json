@@ -9,5 +9,8 @@
     "babelify": "^7.3.0",
     "browserify": "^13.0.1",
     "vue": "^2.0.3"
+  },
+  "dependencies": {
+    "npm": "^5.8.0"
   }
 }
