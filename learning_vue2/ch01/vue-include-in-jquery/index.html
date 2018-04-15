@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shopping List</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+  <h2>My Shopping List</h2>
+  <div class="input-group">
+    <input placeholder="add shopping list item" type="text" class="js-new-item form-control">
+    <span class="input-group-btn">
+      <button @click="addItem" class="js-add btn btn-default" type="button">Add!</button>
+    </span>
+  </div>
+    <ul>
+      <li>
+        <div class="checkbox">
+          <label>
+            <input class="js-item" name="list" type="checkbox"> Carrot
+          </label>
+        </div>
+      </li>
+      <li>
+        <div class="checkbox">
+          <label>
+            <input class="js-item" name="list" type="checkbox"> Book
+          </label>
+        </div>
+      </li>
+      <li class="removed">
+        <div class="checkbox">
+          <label>
+            <input class="js-item" name="list" type="checkbox"> Gift for aunt's
+          </label>
+        </div>
+      </li>
+    </ul>
+    <div class="footer">
+      <hr>
+      <em>Change the title of your shopping list here</em>
+      <input type="text" class="js-change-title" value="My Shopping List">
+    </div>
+
+    <div id="pronouns">
+      <p><strong>Check yourself</strong></p>        
+      <textarea name="text" class="textarea" v-model="text"
+        v-on:keyup="checkText">
+          <!-- {{ text }} -->
+      </textarea>
+      <i v-bind:class="{ 'correct': correct, 'incorrect': !correct }"></i>
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" type="text/javascript"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
