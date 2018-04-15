@@ -2,12 +2,18 @@ var POMODORO_STATES = {
   WORK: 'work',
   REST: 'rest'
 };
+var STATES = {
+  STARTED: 'started',
+  STOPPED: 'stopped',
+  PAUSED: 'paused'
+};
 var WORKING_TIME_LENGTH_IN_MINUTES = 25;
 var RESTING_TIME_LENGTH_IN_MINUTES = 5;
 
 new Vue({
   el: '#app',
   data: {
+    state: STATES.STOPPED,
     minute: WORKING_TIME_LENGTH_IN_MINUTES,
     second: 0,
     pomodoroState: POMODORO_STATES.WORK,
@@ -32,8 +38,20 @@ new Vue({
   },
   methods: {
     start: function() {
+      this.state = STATES.STARTED;
       this.tick();
       this.interval = setInterval(this.tick, 1000)
+    },
+    pause: function() {
+      this.state = STATES.PAUSED;
+      clearInterval(this.interval);
+    },
+    stop: function() {
+      this.state = STATES.STOPPED;
+      clearInterval(this.interval);
+      this.pomodoroState = POMODORO_STATES.WORK;
+      this.minute = WORKING_TIME_LENGTH_IN_MINUTES;
+      this.second = 0;
     },
     tick: function() {
       // if second is not 0, just decrement second
